@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+.{
+	margin: 0;
+	padding: 0;
+}
+.slide{width: 200px;height: 100px;background-color: #BDD7EE;margin: 60px auto;position: relative;text-align: center;}
+.slide .pointer{
+	display: inline-block;
+	position: absolute;
+	bottom: 10px;
+	line-height: 10px;
+}
+.slide .pointer i{
+display: inline-block;
+width: 10px;
+height: 10px;
+margin:auto 5px;
+border-radius: 10px;
+background-color: #000;
+}
+.slide .pointer i.current{
+background-color: #fff;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+<div class="pointer"><i class="current"></i><i></i><i></i></div>
+</div>
+</body>
+</html>

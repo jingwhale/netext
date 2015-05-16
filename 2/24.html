@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		textarea.addEventListener(
+			'input',function(event){
+				var target = event.target,
+					cursor = target.selectionStart;
+				if(target.value.charAt(cursor-1)==='@'){
+					doShowAtList(function(name){
+						var end = cursor + name.length;
+						target.setRangeText(
+							name,cursor,end,'end'
+						);
+					});
+				}
+			}
+		);
+		--------------------------------------
+		parent.addEventListener(
+			'contextmenu',function(event){
+				var target = getTarget(event);
+				if(!!target){
+					event.preventDefualt();
+					showContextMenu(
+						selection,
+						event.pageX,
+						event.pageY
+					);
+				}
+			}
+		);
+		function showContextMenu(selection,left,top){
+			var actions = [
+				{text:'删除歌曲',value:'delete'}
+			];
+			if (selection.length<=1){
+				actions.push(
+					{text:'插入歌曲',value:'insert'},
+					{text:'编辑歌曲',value:'update'},
+				)；
+			}
+			var menu = getMenu(
+				TrimPath.merge(
+					tplMenu,{actions:actionss}
+				)
+			);
+			menu.style.top = top+20+'px';
+			menu.style.left = left +10 +'px';
+			document.body.appendChild(menu);
+		}
+	</script>
+	
+</body>
+</html>

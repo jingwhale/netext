@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<style>
+		.mytabl{
+			font-family: "微软雅黑", arail, sans-serif;
+			margin: 60px auto;
+			color: #777477;
+			font-size: 14px;
+		}
+		.mytabl caption{
+			
+			color: #000;
+		}
+		.mytabl .fontblod{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<table class="mytabl" cellspacing="10px" cellpadding="10px">
+			<caption class="fontblod">运费详情</caption>
+			<thead>
+				<tr class="fontblod">
+					<td>区域</td>
+					<td>寄达地</td>
+					<td>首重（元/1000g）</td>
+					<td>续重（元/1000g）</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="2" class="fontblod">一区</td>
+					<td>浙江、上海、江苏</td>
+					<td>6</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>江西、安徽</td>
+					<td>7</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td class="fontblod">二区</td>
+					<td>吉林、黑龙江、云南</td>
+					<td>10</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td class="fontblod">三区</td>
+					<td>新疆、西藏</td>
+					<td>15</td>
+					<td>10</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+</body>
+</html>

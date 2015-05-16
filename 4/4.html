@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<select name="year" id="year">
+		<option value="0">--</option>
+		<option value="1999">1999</option>
+		<option value="2000">2000</option>
+		<option value="2001">2001</option>
+	</select>年
+	<select name="month" id="month">
+		<option value="0">--</option>
+		<option value="1999">1</option>
+		<option value="2000">2</option>
+		<option value="2001">3</option>
+		<option value="2002">4</option>
+	</select>月
+	<select name="date" id="date">
+		<option value="0">--</option>
+		<option value="1999">1</option>
+		<option value="2000">2</option>
+		<option value="2001">3</option>
+		<option value="2002">4</option>
+	</select>日
+
+	<script>
+		var year = document.getElementById('year');
+		var month = document.getElementById('month');
+		var date = document.getElementById('date');
+
+		var addEvent = document.addEventListener ? function(elem,type,listener,useCapture){
+			elem.addEventListener(type,listener,useCapture);
+		}:
+		function(elem,type,listener,useCapture){
+			elem.attachEvent('on' + type,listener);
+		};
+
+		var checkyear = function(v){
+			if(v='--'){
+				 	month.options[0].selected=true;
+				 	date.options[0].selected=true;
+			}
+		}
+
+		var checkmonth = function(v){
+			if (year.options[0].selected) {
+				month.options[0].selected=true;
+			}else if(v='--'){
+				date.options[0].selected=true;
+			}
+		}
+
+		var checkdate = function(v){
+			if(year.options[0].selected || month.options[0].selected){
+				date.options[0].selected=true;
+			}
+		}
+		addEvent(year,'change',checkyear);
+		addEvent(month,'change',checkmonth);
+		addEvent(date,'change',checkdate);
+	</script>
+
+
+
+	</script>
+</body>
+</html>

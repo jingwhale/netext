@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <div id="example">
+	  <p id="p1" class="aaa bbb">1</p>
+	  <p id="p2" class="aaa ccc">2</p>
+	  <p id="p3" class="bbb ccc">3</p>
+	</div> -->
+
+<!-- 	<div id="nihao">欢迎<a href="/profile">Jerry</a>同学!</div> -->
+	<!-- <ul id="asdll">
+		<li id="x">实用技能</li>
+		<li id="y">高等教育</li>
+	</ul> -->
+	 <!-- <p id="pos" style="line-height: 200px"> -->
+	<!-- <p id="profession"><em id="m">微专业</em>是由<a id="n" href="http://study.163.com">网易云课堂</a>精心打造的职业化课程</p> -->
+	<!-- <div id="pos" data-first-name="Wei">aq</div> -->
+	<div><label id="pos" for="user">用户名：</label><input id="user"></div>
+</body>
+
+<script>
+	// function getElementsByClassName(element,names){
+	// 	if(element.getElementsByClassName){
+	// 		var result = element.getElementsByClassName(names);
+	// 		// for(var i=0;i<nam.length;i++){
+	// 		// 	nam[i].style.color="red";
+	// 		// }
+	// 	}else{
+	// 		var list = element.getElementsByTagName('*'),
+	// 		    result = [];
+	// 		for (var i=0;i<list.length;i++){
+	// 			if((' '+list[i].className+' ').indexOf(' '+names+' ')!=-1){
+	// 				// list[i].style.color="red";
+	// 				result.push(list[i]);
+	// 			}
+	// 		}
+	// 	}
+	// 	return result;
+	// }
+ //  	getElementsByClassName(example,"bbb aaa");
+
+
+ // var oDiv = document.getElementById('pos');
+ // // alert(oDiv.children.length);
+ // // alert(x.parentNode.id);
+ // alert(oDiv.getAttribute("data-first-name"));
+ // alert(oDiv.getAttribute("first-name"));
+ // alert(oDiv.dataset.firstName);
+ // alert(oDiv.["for"]);
+
+ function get(url,options,callback){
+ 	if(window.XMLHttpRequest)
+	{
+		var xhr=new XMLHttpRequest();
+	}
+	else
+	{
+		var xhr=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+ 	xhr.onreadystatechange = function (callback){
+ 		if(xhr.readyState == 4){
+ 			if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+ 				callback(xhr.responseText);
+ 			}else{
+ 				alert('Request was unsuccessful:' + xhr.status);
+ 			}
+ 		}
+ 	}
+ 	var sendurl = url + '?' + serialize(options);
+ 	xhr.open('get',sendurl,true);
+ 	xhr.setRequestHeader('myHeader','myValue');
+ 	xhr.send(null);
+ }
+
+ function serialize(data){
+ 	if(!data) return '';
+ 	var pairs = [];
+ 	for (var name in data){
+ 		if(!data.hasOwnProperty(name)) continue;
+ 		if (typeof data[name] === 'function') continue;
+ 		var value = data[name].toString();
+ 		name = enCodeURIComponent(name);
+ 		value = enCodeURIComponent(value);
+ 		pairs.push(name + '=' +value);
+ 	}
+ 	return pairs.join('&');
+ }
+	
+</script>
+</html>

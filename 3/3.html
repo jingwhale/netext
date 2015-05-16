@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function myType(x){ 
+    if(x==null){  
+        console.log("I am an null!");  
+    }  
+    var t= typeof x;  
+    if(t!="object"){  
+        console.log("I am an "+t+"!");    
+    }  
+    var c=Object.prototype.toString.apply(x);  
+    c=c.substring(8,c.length-1);  
+    if(c!="Object"){  
+        console.log("I am an "+c+"!");    
+    }  
+    if(x.constructor==Object){ 
+        console.log("I am an "+c+"!");
+    }  
+    if("classname" in x.prototype.constructor  
+            && typeof x.prototype.constructor.classname=="string"){  
+        console.log("I am an "+x.constructor.prototype.classname+"!");    
+
+    }  
+      
+}  
+// myType(null);
+// myType({});
+// myType([1,3]);
+myType(new Date());
+
+
+	</script>
+	
+</body>
+</html>

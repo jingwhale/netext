@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	</title>
+</head>
+<body>
+
+	<script>
+		function Circle(r){
+			this.r=r;
+		}
+		Circle.prototype.perimeter = function(){
+			return peri = 2*this.r*Math.PI;
+		}
+
+		Circle.prototype.area = function(){
+			return area = this.r*this.r*Math.PI;
+		}
+		var mycircle = new Circle(3);
+		alert(mycircle.perimeter());
+		alert(mycircle.area());
+
+
+
+		// var a = 0;
+		// // var b = ++a;
+		// var b = false || a++;
+		// alert(a);
+		// alert(b);
+		// (function(){
+		// 	a=5;
+		// 	alert(window.a);
+			// var a=0;
+		// 	alert(a);
+		// })();
+		// var abc = new Arry();
+		// var a=(function(){
+		// 	return f();
+		// 	function f(){return 3}
+		// 		var f;
+		// 		f=2;
+		// })();
+		// var b=true&a++;
+		// var b = Boolean(false); 
+		// var b = Boolean(NAN); 
+		// function plusplus(num){
+		// 	return ++num;
+		// }
+		// var a=0;
+		// var b=plusplus(a);
+		// alert(b)
+		// var $ab1c = 123;
+		// alert($ab1c);
+		// alert(null === null);
+		// alert({} === {});
+		// alert(parseInt("a1")===NaN);
+		// 
+		// (function(value){
+		// 	if(value>1)
+		// 		return value*     (value-1);
+		// 	return value;
+		// })(20);
+		
+
+	</script>
+</body>
+</html>

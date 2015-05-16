@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link id="skin" rel="stylesheet" href="base.css">
+	<!-- <link id="skin" rel="stylesheet" href="skin.spring.css"> -->
+	<title>换肤</title>
+</head>
+<body>
+	<div class="m-tw clearfix">
+		<div class="u-img">
+			<a href="#"><img src="zyl" alt=""></a>
+		</div>
+		<div class="txt">
+			<h3><a href="#">张云龙</a></h3>
+			<p>上方可选择闹钟响铃时间，下方可设置闹钟的重复方式、标签、铃声设置完后，点击【存储】即可完成闹钟添加。</p>
+		</div>
+		<button id="change">换肤</button>
+	</div>
+	<script>
+	    var addEvent = document.addEventListener ? function(elem,type,listener,useCapture){
+			elem.addEventListener(type,listener,useCapture);
+		}:
+		function(elem,type,listener,useCapture){
+			elem.attachEvent('on' + type,listener);
+		};
+
+		var aBtn = document.getElementById("change"),
+			skinEle = document.getElementById("skin");
+		var mouseDownHandler = function(event){
+			skinEle.href = "skin.spring.css";
+		}
+		addEvent(aBtn,'mousedown',mouseDownHandler);
+		// if(aBtn.addEventListener){
+		// 	aBtn.addEventListener("click", function(){
+		// 		skinEle.href = "skin.spring.css";
+		// 	});
+		// }else{
+		// 	aBtn.attachEvent('on'+"click", function(){
+		// 		skinEle.href = "skin.spring.css";
+		// 	});
+		// }
+	</script>
+</body>
+</html>

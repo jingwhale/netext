@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+
+	</script>
+</head>
+<body>
+
+<script>
+		
+	// function setName(obj){
+	//     obj.name = "obama";
+	//     obj = {name:"clinton"};
+	// }
+	// var president = {name:"bush"};
+	// setName(president);
+	// 
+	// var str = "welcome to NetEase!welcome to MOOC!";
+	// var a = str.indexOf("to");
+	// var b = str.indexOf("to", a+1);
+	// 
+	// var arr=[1,2,"a","b"];
+ //    var ret=arr.splice(1,2,3);
+ //    
+ // parseInt("10.1",16);
+ // var a="1+1".replace("1","2");
+// var x = {a:1};
+// var y = x;
+// y.a = 2;
+// var obj = Object.create({a:1});
+// var b=obj.hasOwnproperty('a');
+// 
+// var a = 0;
+// var b = false&&a++;
+// var a = 0;
+// var b = true||a++;
+// var a = 0;
+// var b = a++;
+// alert(a);
+// (function(){
+// 	a = 5;
+// 	alert(window.a);
+// 	var a = 10;
+// 	alert(a);
+// })();
+
+// var a = 1;
+// var func = (function(){
+// var a = 2;
+// return function() {	
+// 	a++;
+//    alert(a);
+// }
+// })();
+// func();
+// func();
+
+// (function(){
+// /*定义父类及属性*/
+// function ClassParent{this.title = title;}
+// /*父类方法*/
+// ClassParent.classMethed = function(){}
+// ClassParent.prototype.api = function(){}
+
+// /*创建子类并继承父类的属性*/
+// function ClassSon(){ClassParent.apply(this,arguments);}
+// /*子类继承父类的方法*/
+// ClassSon.prototype = new ClassParent();
+// ClassSon.prototype.constructor = ClassParent;
+// ClassSon.prototype.api = function(){
+// 	ClassParent.prototype.api.apply(this,arguments);
+// }
+
+// /*创建子类对象*/
+// var b = new ClassSon;
+// /*调用方法*/
+// b.api();
+// })();
+
+
+// (functuon(){
+// 	var proto = {
+// 		action1:function(){
+// 			//TODO
+// 		}
+// 		action2:function(){
+// 			//TODO
+// 		}
+// 	}
+// 	var obj = Object.create(proto);
+// })();
+
+// var clone = (function(){
+// 	var F = function(){};
+// 	return function(proto){
+// 		F.prototype = proto;
+// 		return new F();
+// 	}
+// })();
+
+function type(obj){
+	return Object.prototype.toString.call(obj).slice(8,-1).toLowerCase();
+}
+
+var t=type("sldk");
+alert("t==="+t);
+// type("sldk");
+		
+</script>
+</body>
+</html>

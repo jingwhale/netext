@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		a{
+			font-size:18px;
+		width: 10px;
+
+		}
+		.mani{
+			tet
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" with="300px" height="300px"></canvas>
+	<!-- <div></div>
+	<div></div>
+	<div><a href=""></a></div> -->
+
+	<script>
+	// 	function getcookie (){
+	// 		var cookie = {};
+	// 		var all = document.cookie;
+	// 		if (all === '')
+	// 			return cookie;
+	// 		var list = all.split('; ');
+	// 		for (var i=0;i <list.length;i++){
+	// 			var item = list[i];
+	// 			var p = item.indexOf('=');
+	// 			var name = item.substring(0,p);
+	// 			name = decodeURIComponent(name);
+	// 			var value = item.substring(p+1);
+	// 			value = decodeURIComponent(value);
+	// 			cookie[name] = value;
+	// 		}
+	// 		return cookie;
+	// 	}
+
+
+	// function fadeout(element){
+	// 	var from = 0;
+	// 	var to = 1;
+	// 	var duration = to-from;
+	// 	var stepLenth = distance/100;
+	// 	var offset = 0;
+	// 	var step = function() {
+	// 		var tmpOffset = offset + stepLenth;
+	// 		if(tmpOffset<duration){
+	// 			if(document.all){  //IE
+	// 		        element.style.filter='alpha(opacity='+(from+tmpOffset)*100+')';
+	// 		    }else{             //FF
+	// 		        elm.style.opacity=from+tmpOffset;
+	// 			}
+	// 			offset=tmpOffset;
+	// 		}
+
+	// 		if(document.all){  //IE
+	// 	        element.style.filter='alpha(opacity='+from*100+')';
+	// 	    }else{             //FF
+	// 	        elm.style.opacity=from;
+	// 		}
+	// 		var intervalID = setInterval(step,10);
+	// 	}
+	// }
+	function draw(id){
+		var ctx = document.getElemenById(id).getContext('2d');
+		ctx.globalCompositeOperation = 'destination-over';
+		// ctx.clearRect(0,0,300,300);
+
+		ctx.beginPath();
+		ctx.arc(150, 150, 100, 0, Math.PI * 2, true);
+		// ctx.closePath();
+		cxt.stroke();
+		ctx.fillStyle = "#6a83ff";
+		ctx.fill();
+	}
+
+	draw(myCanvas);
+	</script>
+
+	
+</body>
+</html>

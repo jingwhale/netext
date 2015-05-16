@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css transition</title>
+	<style>
+	*{
+		margin: 0;
+		padding:0;
+	}
+		.m-demo{
+			width: 600px;
+			height: 100px;
+			outline:2px dashed;
+			margin: 20px auto;
+			position: relative;
+			background-color: #B9C78F;
+		}
+
+		.m-demo pre{
+			transition:2s;width: 100px;height: 100px;padding: 0;line-height: 100px;border-radius: 50%;font-size: 20px;text-align: center;border: 1px solid #000;position: absolute;top:0;left:0;color: #fff;background-color: #8BA243;
+		}
+		.m-demo:hover pre{left: 500px;color: #000;}
+		.m-demo-1 pre{transition-property:none;}
+		.m-demo-2 pre{transition-property:all;}
+		.m-demo-3 pre{transition-property:left;}
+		.m-demo-4 pre{transition-property:left,color;}
+	</style>
+</head>
+<body>
+	<div class="m-demo m-demo-1">
+		<pre>none</pre>
+	</div>
+
+	<div class="m-demo m-demo-2 .prehover">
+		<pre>all</pre>
+	</div>
+
+	<div class="m-demo m-demo-3">
+		<pre>left</pre>
+	</div>
+
+	<div class="m-demo m-demo-4">
+		<pre>left&color</pre>
+	</div>
+
+	
+</body>
+</html>

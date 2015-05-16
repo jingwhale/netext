@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#mydiv{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<p id="mydiv" >csakmck</p>
+	<script>
+		/* 
+* @string element 元素id 
+* @string cssPropertyName 样式名 
+*/ 
+	function getStyle(element,cssPropertyName){ 
+
+		var myid = document.getElementById('element');
+		if(window.getComputedStyle) {
+			  return window.getComputedStyle(mydiv , null)[cssPropertyName];
+		      
+		} else if(myid.currentStyle) {
+		      return myid.currentStyle[cssPropertyName];
+		}
+	}
+	getStyle(mydiv,"color");
+	</script>
+</body>
+</html>

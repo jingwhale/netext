@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function myBom(){
+			var w = window.open("http://www.163.com","subwindow","with=400,height=350,stauts=yes,toolbar=yes,resizable=yes");
+			setInterval(function (){w.close();},5000);
+		}
+		myBom();
+	</script> 
+</body>
+</html>

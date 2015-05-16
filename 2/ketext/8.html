@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition text</title>
+	<style>
+		* {margin:0;padding:0;}
+		ul{width:300px;}
+		ul:after {clear:both;display:block;content:".";height:0;visibility:hidden;font-size:0;line-height:0;}
+		ul li{list-style:none;font-size:12px;color:#069;border:1px solid #CBCBCB;background-color:#E5E5E5;border-radius:3px;box-shadow:1px 1px 0 #96969D;width:280px;height:30px;margin-bottom:100px;}
+		li a{position:relative;width:230px;height:30px;padding-left:25px;display:block;}
+		/*li a img{position:absolute;top:6px;left:5px;border:0 none;display:block;}*/
+		li a span, li a strong{position:absolute;top:0;left:25px;opacity:1;
+		-webkit-transition:all 800ms linear;
+		-moz-transition:all 800ms linear;
+		-o-transition:all 800ms linear;line-height:30px;width:240px;}
+		li a strong{top:30px;opacity:0;}
+		li a:hover{color:#FF6500;_background-color:#E5E5E5;font-weight:bolder;}
+		li a:hover strong{top:0;opacity:1;}
+		li a:hover span{top:-30px;opacity:0;}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+		    <li><a href="http://www.baidu.com"><span>百度</span><strong>看看效果如何</strong></a></li>
+		    <li><a href="http://zhidao.baidu.com"><span>百度知道</span><strong>看看效果如何</strong></a></li>
+		    <li><a href="http://wenku.baidu.com/"><span>百度文库</span><strong>看看效果如何</strong></a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

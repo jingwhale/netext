@@ -1,0 +1,17 @@
+.m-tw{
+	width: 960px;
+	height: 1000px;
+	/*margin:0 auto;*/
+	/*background-color: red;*/
+}
+
+.m-tw .u-img{
+	float:left;
+	width: 200px;
+	height: 200px;
+}
+.m-tw .txt p{
+	color: red;
+}
+
+.clearfix:after{content:'.';display: block;clear: both;height: 0;overflow: hidden;visibility: hidden;}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<style>
+		.myform{
+			width: 500px;
+			height: 500px;
+			margin: 0 auto;
+			font-family: "微软雅黑", arail, sans-serif;
+			font-size: 14px;
+		}
+		.myform div{
+             padding: 10px;
+		}
+		.myform .titlebold{
+			font-weight: bold;
+			margin-right: 10px;
+			font-size: 15px;
+		}
+		.myform .sign{
+			float: left;
+			display: block;
+		}
+		.myform .save{
+			border: 0;
+			width: 60px;
+			height: 30px;
+			margin-left:40px;
+			background-color: #D753B8;
+			color: #fff;
+			font-weight: bold;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="myform">
+		<form action="/example/html/form.asp" method="get">
+			<div>
+				<label for="file" class="titlebold">头像</label>
+				<input type="file" id="file"/>
+			</div>
+			<div>
+				<label for="littname" class="titlebold">昵称</label>
+				<input type="text" id="littname"/>
+			</div>
+			<div >
+				<label for="edulist" class="titlebold">学历</label>
+				<select name="edu" id="edulist">
+				  <option value ="college">大专</option>
+				  <option value ="university">本科</option>
+				</select>
+			</div>
+			<div>
+				<label class="titlebold">性别</label>
+				<input type="radio" name="sex" id="male" value="0" /><label for="male">男</label>
+				<input type="radio" name="sex" id="female" value="1" /><label for="female">女</label>
+			</div>
+			<div>
+				<label class="titlebold">爱好</label>
+				<input type="checkbox" name="hobby1" id="hobby1" /><label for="hobby1">电影</label>
+				<input type="checkbox" name="hobby2" id="hobby2" /><label for="hobby2">摄影</label>
+				<input type="checkbox" name="hobby3" id="hobby3" /><label for="hobby3">音乐</label>
+				<input type="checkbox" name="hobby4" id="hobby4" /><label for="hobby4">阅读</label>
+			</div>
+			<div>
+				<label for="signcon" class="titlebold sign">签名</label>
+				<textarea rows="3" cols="30" id="signcon" value=""></textarea>
+			</div>
+			<div>
+				<input type="submit" value="保存" class="save">
+			</div>
+		</form>
+	</div>
+	
+</body>
+</html>

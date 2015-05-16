@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function get(url,options,callback){
+			if(window.XMLHttpRequest)
+			{
+				var xhr=new XMLHttpRequest();
+			}
+			else
+			{
+				var xhr=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		 	xhr.onreadystatechange = function (callback){
+			 	if(xhr.readyState == 4){
+				 	if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+				 		callback(xhr.responseText);
+				 	}else{
+				 		alert('Request was unsuccessful:' + xhr.status);
+				 	}
+			 	}
+		 	}
+		 	xhr.open('post',url,true);
+		 	xhr.setRequestHeader('myHeader','myValue');
+		 	xhr.send(serialize(options));
+		}
+
+		function serialize(data){
+		 	if(!data) return '';
+		 	var pairs = [];
+		 	for (var name in data){
+		 	if(!data.hasOwnProperty(name)) continue;
+		 	if (typeof data[name] === 'function') continue;
+		 	var value = data[name].toString();
+		 	name = enCodeURIComponent(name);
+		 	value = enCodeURIComponent(value);
+		 	pairs.push(name + '=' +value);
+		 	}
+		 	return pairs.join('&');
+		}
+
+	</script>
+	
+</body>
+</html>
